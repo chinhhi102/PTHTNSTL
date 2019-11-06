@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DemoHTPTNS.DAL;
 
 namespace DemoHTPTNS.GUI.BaoCao
 {
@@ -16,14 +17,91 @@ namespace DemoHTPTNS.GUI.BaoCao
             InitializeComponent();
         }
 
+        private String cate = "";
+        private DataTable dt = null;
+
+        /*
+        V -> Vi tri công việc
+        P -> Phòng Ban
+        C -> Chuyên môn
+        K -> Khả năng làm việc
+        T -> Tiền lương
+        H -> Hồ sơ nhận
+        */
         private void GUI_BaoCao_ChiTietBaoCao_Load(object sender, EventArgs e)
         {
-            lbBaoCao.Text = "BÁO CÁO THEO " + (String)this.Tag;
+            LoadData();
         }
 
+        private void LoadData()
+        {
+cate = (String)this.Tag;
+            lbBaoCao.Text = "BÁO CÁO THEO " + cate;
+            DateTime TuNgay = dtpTuNgay.Value;
+            DateTime DenNgay = dtpDenNgay.Value;
+            try
+            {
+                string sql = String.Format("Select * From ");
+                switch (cate[0])
+                {
+                    case 'V':
+                        {
+                            sql += "Fn_BaoCaoViTri(@TuNgay, @DenNgay)";
+                            break;
+                        }
+                    case 'P':
+                        {
+                            sql += "Fn_BaoCaoPhongBan(@TuNgay, @DenNgay)";
+                            break;
+                        }
+                    case 'C':
+                        {
+                            sql += "Fn_BaoCaoChuyenMon(@TuNgay, @DenNgay)";
+                            break;
+                        }
+                    case 'K':
+                        {
+                            sql += "Fn_BaoCaoKhaNang(@TuNgay, @DenNgay)";
+                            break;
+                        }
+                    case 'T':
+                        {
+                            sql += "Fn_BaoCaoTienLuong(@TuNgay, @DenNgay)";
+                            break;
+                        }
+                    case 'H':
+                        {
+                            sql += "Fn_BaoCaoHoSoNhan(@TuNgay, @DenNgay)";
+                            break;
+                        }
+                }
+                dt = SqlServerHelper.ExecuteDataTable(sql, CommandType.Text,
+                    "@TuNgay", SqlDbType.Date, TuNgay,
+                    "@DenNgay", SqlDbType.Date, DenNgay);
+                dtgvBaoCao.DataSource = dt;
+                foreach (DataGridViewColumn c in dtgvBaoCao.Columns)
+                {
+                    c.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error");
+            }
+        }
         private void bntThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dtpTuNgay_ValueChanged(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void dtpDenNgay_ValueChanged(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }
