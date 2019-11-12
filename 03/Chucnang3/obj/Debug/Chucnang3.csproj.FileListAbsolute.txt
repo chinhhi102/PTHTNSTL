@@ -1,0 +1,14 @@
+D:\Chucnang3\Chucnang3\bin\Debug\Chucnang3.exe.config
+D:\Chucnang3\Chucnang3\bin\Debug\Chucnang3.exe
+D:\Chucnang3\Chucnang3\bin\Debug\Chucnang3.pdb
+D:\Chucnang3\Chucnang3\obj\Debug\Chucnang3.csprojAssemblyReference.cache
+D:\Chucnang3\Chucnang3\obj\Debug\Chucnang3.Properties.Resources.resources
+D:\Chucnang3\Chucnang3\obj\Debug\Chucnang3.csproj.GenerateResource.cache
+D:\Chucnang3\Chucnang3\obj\Debug\Chucnang3.exe
+D:\Chucnang3\Chucnang3\obj\Debug\Chucnang3.pdb
+D:\Chucnang3\Chucnang3\obj\Debug\Chucnang3.MainForm.resources
+D:\Chucnang3\Chucnang3\obj\Debug\Chucnang3.hosokhongtrungtuyen.resources
+D:\Chucnang3\Chucnang3\obj\Debug\Chucnang3.hosotrungtuyen.resources
+D:\Chucnang3\Chucnang3\obj\Debug\Chucnang3.Tatcahoso.resources
+D:\Chucnang3\Chucnang3\obj\Debug\Chucnang3.ketquakiemtra.resources
+D:\Chucnang3\Chucnang3\obj\Debug\Chucnang3.themhoso.resources

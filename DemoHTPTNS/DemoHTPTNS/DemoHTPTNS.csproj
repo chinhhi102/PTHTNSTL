@@ -61,16 +61,16 @@
     <Compile Include="GUI\BaoCao\GUI_BaoCao_ChiTietBaoCao.Designer.cs">
       <DependentUpon>GUI_BaoCao_ChiTietBaoCao.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GUI_CapNhapTinhHinh.cs">
+    <Compile Include="GUI\CapNhap\GUI_CapNhapTinhHinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\GUI_CapNhapTinhHinh.Designer.cs">
+    <Compile Include="GUI\CapNhap\GUI_CapNhapTinhHinh.Designer.cs">
       <DependentUpon>GUI_CapNhapTinhHinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GUI_ChonLocHoSo.cs">
+    <Compile Include="GUI\ChonLoc\GUI_ChonLocHoSo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\GUI_ChonLocHoSo.Designer.cs">
+    <Compile Include="GUI\ChonLoc\GUI_ChonLocHoSo.Designer.cs">
       <DependentUpon>GUI_ChonLocHoSo.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\ThongBao\GUI_InThongBao.cs">
@@ -79,10 +79,10 @@
     <Compile Include="GUI\ThongBao\GUI_InThongBao.Designer.cs">
       <DependentUpon>GUI_InThongBao.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GUI_XuLyHoSo.cs">
+    <Compile Include="GUI\XuLy\GUI_XuLyHoSo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\GUI_XuLyHoSo.Designer.cs">
+    <Compile Include="GUI\XuLy\GUI_XuLyHoSo.Designer.cs">
       <DependentUpon>GUI_XuLyHoSo.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmHome.cs">
@@ -132,7 +132,7 @@
     <EmbeddedResource Include="GUI\BaoCao\GUI_BaoCao.resx">
       <DependentUpon>GUI_BaoCao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GUI_CapNhapTinhHinh.resx">
+    <EmbeddedResource Include="GUI\CapNhap\GUI_CapNhapTinhHinh.resx">
       <DependentUpon>GUI_CapNhapTinhHinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ThongBao\GUI_InThongBao.resx">

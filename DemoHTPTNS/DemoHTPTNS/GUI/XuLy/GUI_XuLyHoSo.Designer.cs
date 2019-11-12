@@ -1,6 +1,6 @@
-﻿namespace DemoHTPTNS.GUI
+﻿namespace DemoHTPTNS.GUI.XuLy
 {
-    partial class GUI_ChonLocHoSo
+    partial class GUI_XuLyHoSo
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "GUI_ChonLocHoSo";
+            this.Text = "GUI_XuLyHoSo";
         }
 
         #endregion

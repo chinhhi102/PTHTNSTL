@@ -8,6 +8,9 @@ using System.Text;
 using System.Windows.Forms;
 using DemoHTPTNS.GUI.ThongBao;
 using DemoHTPTNS.GUI.BaoCao;
+using DemoHTPTNS.GUI.CapNhap;
+using DemoHTPTNS.GUI.ChonLoc;
+using DemoHTPTNS.GUI.XuLy;
 
 namespace DemoHTPTNS.GUI
 {

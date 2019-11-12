@@ -1,4 +1,4 @@
-﻿namespace DemoHTPTNS.GUI
+﻿namespace DemoHTPTNS.GUI.CapNhap
 {
     partial class GUI_CapNhapTinhHinh
     {

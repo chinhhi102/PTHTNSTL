@@ -5,13 +5,14 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DemoHTPTNS.GUI
+namespace thuthapvachonlochoso
 {
-    public partial class GUI_XuLyHoSo : Form
+    public partial class Form1 : Form
     {
-        public GUI_XuLyHoSo()
+        public Form1()
         {
             InitializeComponent();
         }

@@ -5,15 +5,21 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DemoHTPTNS.GUI
+namespace thuthapvachonlochoso
 {
-    public partial class GUI_ChonLocHoSo : Form
+    public partial class hosoxinviec : Form
     {
-        public GUI_ChonLocHoSo()
+        public hosoxinviec()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

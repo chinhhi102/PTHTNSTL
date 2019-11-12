@@ -7,18 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace DemoHTPTNS.GUI
+namespace DemoHTPTNS.GUI.XuLy
 {
-    public partial class GUI_CapNhapTinhHinh : Form
+    public partial class GUI_XuLyHoSo : Form
     {
-        public GUI_CapNhapTinhHinh()
+        public GUI_XuLyHoSo()
         {
             InitializeComponent();
-        }
-
-        private void GUI_CapNhapTinhHinh_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
