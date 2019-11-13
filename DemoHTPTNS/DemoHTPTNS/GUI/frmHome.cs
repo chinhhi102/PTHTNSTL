@@ -24,7 +24,7 @@ namespace DemoHTPTNS.GUI
         private GUI_ThongBao_ChucNang fInThongBao = null;
         private GUI_ChonLocHoSo fChonLoc = null;
         private GUI_XuLyHoSo fXuLy = null;
-        private GUI_CapNhapTinhHinh fCapNhap = null;
+        private GUI_CapNhap_DSHoSo fCapNhap = null;
         private GUI_BaoCao fBaoCao = null;
 
         public frmHome()
@@ -102,7 +102,7 @@ namespace DemoHTPTNS.GUI
 
         private void mnuCapNhapTinhHinh_Click(object sender, EventArgs e)
         {
-            fCapNhap = ShowOrActiveForm(fCapNhap, typeof(GUI_CapNhapTinhHinh)) as GUI_CapNhapTinhHinh;
+            fCapNhap = ShowOrActiveForm(fCapNhap, typeof(GUI_CapNhap_DSHoSo)) as GUI_CapNhap_DSHoSo;
         }
 
         private void mnuBaoCao_Click(object sender, EventArgs e)

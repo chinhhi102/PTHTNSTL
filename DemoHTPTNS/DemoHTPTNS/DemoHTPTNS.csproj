@@ -67,6 +67,12 @@
     <Compile Include="GUI\CapNhap\GUI_CapNhapTinhHinh.Designer.cs">
       <DependentUpon>GUI_CapNhapTinhHinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\CapNhap\GUI_CapNhap_DSHoSo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CapNhap\GUI_CapNhap_DSHoSo.Designer.cs">
+      <DependentUpon>GUI_CapNhap_DSHoSo.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ChonLoc\GUI_ChonLocHoSo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     <Compile Include="Settings.cs" />
     <EmbeddedResource Include="GUI\BaoCao\GUI_BaoCao_ChiTietBaoCao.resx">
       <DependentUpon>GUI_BaoCao_ChiTietBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CapNhap\GUI_CapNhap_DSHoSo.resx">
+      <DependentUpon>GUI_CapNhap_DSHoSo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
