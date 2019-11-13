@@ -12,3 +12,14 @@ D:\Chucnang3\Chucnang3\obj\Debug\Chucnang3.hosotrungtuyen.resources
 D:\Chucnang3\Chucnang3\obj\Debug\Chucnang3.Tatcahoso.resources
 D:\Chucnang3\Chucnang3\obj\Debug\Chucnang3.ketquakiemtra.resources
 D:\Chucnang3\Chucnang3\obj\Debug\Chucnang3.themhoso.resources
+C:\Users\chinhhi102\Desktop\PTNSTL\03\Chucnang3\obj\Debug\Chucnang3.csprojAssemblyReference.cache
+C:\Users\chinhhi102\Desktop\PTNSTL\03\Chucnang3\obj\Debug\Chucnang3.hosokhongtrungtuyen.resources
+C:\Users\chinhhi102\Desktop\PTNSTL\03\Chucnang3\obj\Debug\Chucnang3.hosotrungtuyen.resources
+C:\Users\chinhhi102\Desktop\PTNSTL\03\Chucnang3\obj\Debug\Chucnang3.ketquakiemtra.resources
+C:\Users\chinhhi102\Desktop\PTNSTL\03\Chucnang3\obj\Debug\Chucnang3.Tatcahoso.resources
+C:\Users\chinhhi102\Desktop\PTNSTL\03\Chucnang3\obj\Debug\Chucnang3.MainForm.resources
+C:\Users\chinhhi102\Desktop\PTNSTL\03\Chucnang3\obj\Debug\Chucnang3.Properties.Resources.resources
+C:\Users\chinhhi102\Desktop\PTNSTL\03\Chucnang3\obj\Debug\Chucnang3.themhoso.resources
+C:\Users\chinhhi102\Desktop\PTNSTL\03\Chucnang3\obj\Debug\Chucnang3.csproj.GenerateResource.cache
+C:\Users\chinhhi102\Desktop\PTNSTL\03\Chucnang3\obj\Debug\Chucnang3.exe
+C:\Users\chinhhi102\Desktop\PTNSTL\03\Chucnang3\obj\Debug\Chucnang3.pdb

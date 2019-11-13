@@ -128,5 +128,15 @@ namespace DemoHTPTNS.GUI.CapNhap
         {
             this.Close();
         }
+
+        private void bntTuyenDung_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bntKhongTuyen_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

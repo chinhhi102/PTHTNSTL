@@ -214,6 +214,7 @@
             // 
             // bntThoat
             // 
+            this.bntThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.bntThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bntThoat.Location = new System.Drawing.Point(773, 673);
             this.bntThoat.Name = "bntThoat";
@@ -232,6 +233,7 @@
             this.bntTuyenDung.TabIndex = 8;
             this.bntTuyenDung.Text = "TUYỂN DỤNG";
             this.bntTuyenDung.UseVisualStyleBackColor = true;
+            this.bntTuyenDung.Click += new System.EventHandler(this.bntTuyenDung_Click);
             // 
             // bntKhongTuyen
             // 
@@ -242,6 +244,7 @@
             this.bntKhongTuyen.TabIndex = 9;
             this.bntKhongTuyen.Text = "KHÔNG TUYỂN DỤNG";
             this.bntKhongTuyen.UseVisualStyleBackColor = true;
+            this.bntKhongTuyen.Click += new System.EventHandler(this.bntKhongTuyen_Click);
             // 
             // dtpNgaySinh
             // 
@@ -375,6 +378,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.bntThoat;
             this.ClientSize = new System.Drawing.Size(1221, 718);
             this.Controls.Add(this.pnlGioiTinh);
             this.Controls.Add(this.dtpKT);

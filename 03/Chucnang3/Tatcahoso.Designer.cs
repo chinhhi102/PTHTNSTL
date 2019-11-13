@@ -139,7 +139,6 @@
             this.Controls.Add(this.button1);
             this.Name = "Tatcahoso";
             this.Text = "Form2";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTCHS)).EndInit();
             this.ResumeLayout(false);

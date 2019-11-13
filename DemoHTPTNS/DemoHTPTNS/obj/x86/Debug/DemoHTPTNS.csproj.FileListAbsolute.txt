@@ -57,3 +57,4 @@ D:\HKI-2019-2020\PTHTNSTL\DemoHTPTNS\DemoHTPTNS\obj\x86\Debug\DemoHTPTNS.csproj.
 D:\HKI-2019-2020\PTHTNSTL\DemoHTPTNS\DemoHTPTNS\obj\x86\Debug\DemoHTPTNS.exe
 D:\HKI-2019-2020\PTHTNSTL\DemoHTPTNS\DemoHTPTNS\obj\x86\Debug\DemoHTPTNS.pdb
 D:\HKI-2019-2020\PTHTNSTL\DemoHTPTNS\DemoHTPTNS\obj\x86\Debug\DemoHTPTNS.GUI.CapNhap.GUI_CapNhap_DSHoSo.resources
+C:\Users\chinhhi102\Desktop\PTNSTL\DemoHTPTNS\DemoHTPTNS\obj\x86\Debug\DemoHTPTNS.GUI.CapNhap.GUI_CapNhap_DSHoSo.resources
