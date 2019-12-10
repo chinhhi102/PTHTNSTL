@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgvDSHSPV = new System.Windows.Forms.DataGridView();
             this.bntLuu = new System.Windows.Forms.Button();
             this.bntThoat = new System.Windows.Forms.Button();
             this.txtViTri = new System.Windows.Forms.TextBox();
@@ -40,14 +40,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.pnlGioiTinh = new System.Windows.Forms.Panel();
             this.rbntNu = new System.Windows.Forms.RadioButton();
             this.rbntNam = new System.Windows.Forms.RadioButton();
             this.bntGuiEmail = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dtpLichPV = new System.Windows.Forms.DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvDSHSPV)).BeginInit();
             this.pnlGioiTinh.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,13 +61,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "HỒ SƠ XÉT TUYỂN PHỎNG VẤN";
             // 
-            // dataGridView1
+            // dtgvDSHSPV
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 280);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1295, 327);
-            this.dataGridView1.TabIndex = 1;
+            this.dtgvDSHSPV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvDSHSPV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvDSHSPV.Location = new System.Drawing.Point(12, 280);
+            this.dtgvDSHSPV.Name = "dtgvDSHSPV";
+            this.dtgvDSHSPV.ReadOnly = true;
+            this.dtgvDSHSPV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgvDSHSPV.Size = new System.Drawing.Size(1295, 327);
+            this.dtgvDSHSPV.TabIndex = 1;
+            this.dtgvDSHSPV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDSHSPV_CellClick);
             // 
             // bntLuu
             // 
@@ -77,15 +81,18 @@
             this.bntLuu.TabIndex = 2;
             this.bntLuu.Text = "LƯU";
             this.bntLuu.UseVisualStyleBackColor = true;
+            this.bntLuu.Click += new System.EventHandler(this.bntLuu_Click);
             // 
             // bntThoat
             // 
+            this.bntThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.bntThoat.Location = new System.Drawing.Point(1104, 613);
             this.bntThoat.Name = "bntThoat";
             this.bntThoat.Size = new System.Drawing.Size(96, 48);
             this.bntThoat.TabIndex = 2;
             this.bntThoat.Text = "THOÁT";
             this.bntThoat.UseVisualStyleBackColor = true;
+            this.bntThoat.Click += new System.EventHandler(this.bntThoat_Click);
             // 
             // txtViTri
             // 
@@ -161,12 +168,12 @@
             this.label2.TabIndex = 18;
             this.label2.Text = "Mã Nhân Viên:";
             // 
-            // dateTimePicker1
+            // dtpNgaySinh
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(286, 129);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 28;
+            this.dtpNgaySinh.Location = new System.Drawing.Point(286, 129);
+            this.dtpNgaySinh.Name = "dtpNgaySinh";
+            this.dtpNgaySinh.Size = new System.Drawing.Size(200, 20);
+            this.dtpNgaySinh.TabIndex = 28;
             // 
             // pnlGioiTinh
             // 
@@ -219,22 +226,23 @@
             this.label6.TabIndex = 26;
             this.label6.Text = "Đặt lịch phỏng vấn:";
             // 
-            // dateTimePicker2
+            // dtpLichPV
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(867, 129);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 28;
+            this.dtpLichPV.Location = new System.Drawing.Point(867, 129);
+            this.dtpLichPV.Name = "dtpLichPV";
+            this.dtpLichPV.Size = new System.Drawing.Size(200, 20);
+            this.dtpLichPV.TabIndex = 28;
             // 
             // GUI_XuLy_DanhSachHSPV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.bntThoat;
             this.ClientSize = new System.Drawing.Size(1320, 673);
             this.Controls.Add(this.bntGuiEmail);
             this.Controls.Add(this.pnlGioiTinh);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpLichPV);
+            this.Controls.Add(this.dtpNgaySinh);
             this.Controls.Add(this.txtViTri);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label8);
@@ -246,11 +254,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.bntThoat);
             this.Controls.Add(this.bntLuu);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtgvDSHSPV);
             this.Controls.Add(this.label1);
             this.Name = "GUI_XuLy_DanhSachHSPV";
             this.Text = "GUI_XuLy_DanhSachHSPV";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvDSHSPV)).EndInit();
             this.pnlGioiTinh.ResumeLayout(false);
             this.pnlGioiTinh.PerformLayout();
             this.ResumeLayout(false);
@@ -261,7 +269,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgvDSHSPV;
         private System.Windows.Forms.Button bntLuu;
         private System.Windows.Forms.Button bntThoat;
         private System.Windows.Forms.TextBox txtViTri;
@@ -272,12 +280,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtMaNV;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpNgaySinh;
         private System.Windows.Forms.Panel pnlGioiTinh;
         private System.Windows.Forms.RadioButton rbntNu;
         private System.Windows.Forms.RadioButton rbntNam;
         private System.Windows.Forms.Button bntGuiEmail;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpLichPV;
     }
 }

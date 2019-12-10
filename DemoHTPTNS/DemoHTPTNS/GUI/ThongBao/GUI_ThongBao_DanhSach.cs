@@ -13,7 +13,7 @@ namespace DemoHTPTNS.GUI.ThongBao
     public partial class GUI_ThongBao_DanhSach : Form
     {
         DataTable dtMauThongBao = null;
-        int RowSelectIndex = 1;
+        int RowSelectIndex = 0;
         public GUI_ThongBao_DanhSach()
         {
             InitializeComponent();

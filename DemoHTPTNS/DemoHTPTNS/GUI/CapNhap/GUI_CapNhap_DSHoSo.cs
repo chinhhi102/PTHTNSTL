@@ -13,7 +13,7 @@ namespace DemoHTPTNS.GUI.CapNhap
     public partial class GUI_CapNhap_DSHoSo : Form
     {
         DataTable dtDSHoSo = null;
-        int RowSelectIndex = 1;
+        int RowSelectIndex = 0;
         public GUI_CapNhap_DSHoSo()
         {
             InitializeComponent();
@@ -33,7 +33,7 @@ namespace DemoHTPTNS.GUI.CapNhap
         }
         private void bntCapNhap_Click(object sender, EventArgs e)
         {
-            if (RowSelectIndex == -1)
+            if (RowSelectIndex == -1 || RowSelectIndex >= dtDSHoSo.Rows.Count)
             {
                 MessageBox.Show("Bạn chưa chọn mẫu, Vui lòng chọn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -53,6 +53,11 @@ namespace DemoHTPTNS.GUI.CapNhap
         private void bntThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dtgvDanhSachHoSo_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            RowSelectIndex = dtgvDanhSachHoSo.CurrentCell.RowIndex;
         }
     }
 }

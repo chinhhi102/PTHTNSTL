@@ -60,6 +60,7 @@
             this.txtThaiDo = new System.Windows.Forms.TextBox();
             this.txtKinhNghiem = new System.Windows.Forms.TextBox();
             this.txtHieuQua = new System.Windows.Forms.TextBox();
+            this.bntSua = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCapNhap)).BeginInit();
             this.pnlGioiTinh.SuspendLayout();
             this.SuspendLayout();
@@ -177,7 +178,7 @@
             this.dtgvCapNhap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvCapNhap.Size = new System.Drawing.Size(1140, 298);
             this.dtgvCapNhap.TabIndex = 20;
-            this.dtgvCapNhap.Click += new System.EventHandler(this.dtgvCapNhap_Click);
+            this.dtgvCapNhap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvCapNhap_CellClick);
             // 
             // bntThem
             // 
@@ -193,7 +194,7 @@
             // bntXoa
             // 
             this.bntXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.bntXoa.Location = new System.Drawing.Point(583, 673);
+            this.bntXoa.Location = new System.Drawing.Point(762, 673);
             this.bntXoa.Name = "bntXoa";
             this.bntXoa.Size = new System.Drawing.Size(66, 33);
             this.bntXoa.TabIndex = 5;
@@ -204,7 +205,7 @@
             // bntLuu
             // 
             this.bntLuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.bntLuu.Location = new System.Drawing.Point(678, 673);
+            this.bntLuu.Location = new System.Drawing.Point(577, 673);
             this.bntLuu.Name = "bntLuu";
             this.bntLuu.Size = new System.Drawing.Size(66, 33);
             this.bntLuu.TabIndex = 6;
@@ -216,7 +217,7 @@
             // 
             this.bntThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.bntThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.bntThoat.Location = new System.Drawing.Point(773, 673);
+            this.bntThoat.Location = new System.Drawing.Point(862, 673);
             this.bntThoat.Name = "bntThoat";
             this.bntThoat.Size = new System.Drawing.Size(66, 33);
             this.bntThoat.TabIndex = 7;
@@ -374,6 +375,16 @@
             this.txtHieuQua.Size = new System.Drawing.Size(382, 60);
             this.txtHieuQua.TabIndex = 3;
             // 
+            // bntSua
+            // 
+            this.bntSua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.bntSua.Location = new System.Drawing.Point(673, 673);
+            this.bntSua.Name = "bntSua";
+            this.bntSua.Size = new System.Drawing.Size(66, 33);
+            this.bntSua.TabIndex = 6;
+            this.bntSua.Text = "Sửa";
+            this.bntSua.UseVisualStyleBackColor = true;
+            // 
             // GUI_CapNhapTinhHinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,6 +398,7 @@
             this.Controls.Add(this.bntKhongTuyen);
             this.Controls.Add(this.bntTuyenDung);
             this.Controls.Add(this.bntThoat);
+            this.Controls.Add(this.bntSua);
             this.Controls.Add(this.bntLuu);
             this.Controls.Add(this.bntXoa);
             this.Controls.Add(this.bntThem);
@@ -454,5 +466,6 @@
         private System.Windows.Forms.TextBox txtThaiDo;
         private System.Windows.Forms.TextBox txtKinhNghiem;
         private System.Windows.Forms.TextBox txtHieuQua;
+        private System.Windows.Forms.Button bntSua;
     }
 }

@@ -54,6 +54,7 @@
             this.dtgvDanhSachHoSo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvDanhSachHoSo.Size = new System.Drawing.Size(1242, 323);
             this.dtgvDanhSachHoSo.TabIndex = 1;
+            this.dtgvDanhSachHoSo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDanhSachHoSo_CellClick);
             // 
             // bntThoat
             // 

@@ -13,7 +13,7 @@ namespace DemoHTPTNS.GUI.CapNhap
     public partial class GUI_CapNhapTinhHinh : Form
     {
         private int MaHS;
-        int RowSelectIndex = 1;
+        int RowSelectIndex = 0;
         private DataTable dtCapNhap = null;
         private DataRow drNhanVien = null;
         public GUI_CapNhapTinhHinh()
@@ -53,6 +53,10 @@ namespace DemoHTPTNS.GUI.CapNhap
 
         private void BindingData()
         {
+            if (RowSelectIndex >= dtCapNhap.Rows.Count)
+            {
+                return;
+            }
             txtThaiDo.Text = dtCapNhap.Rows[RowSelectIndex][1].ToString();
             txtKhaNang.Text = dtCapNhap.Rows[RowSelectIndex][2].ToString();
             txtKinhNghiem.Text = dtCapNhap.Rows[RowSelectIndex][3].ToString();
@@ -118,12 +122,6 @@ namespace DemoHTPTNS.GUI.CapNhap
             DataLoad();
         }
 
-        private void dtgvCapNhap_Click(object sender, EventArgs e)
-        {
-            RowSelectIndex = dtgvCapNhap.CurrentCell.RowIndex;
-            BindingData();
-        }
-
         private void bntThoat_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -137,6 +135,12 @@ namespace DemoHTPTNS.GUI.CapNhap
         private void bntKhongTuyen_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dtgvCapNhap_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            RowSelectIndex = dtgvCapNhap.CurrentCell.RowIndex;
+            BindingData();
         }
     }
 }
