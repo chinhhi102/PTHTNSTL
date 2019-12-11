@@ -1,7 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoHTPTNS", "DemoHTPTNS\DemoHTPTNS.csproj", "{392A7751-2CF0-4109-845D-FFC212CDB073}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{9252F409-96F9-4991-9DF8-F3B1A149E866}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,8 +17,13 @@ Global
 		{392A7751-2CF0-4109-845D-FFC212CDB073}.Debug|x86.Build.0 = Debug|x86
 		{392A7751-2CF0-4109-845D-FFC212CDB073}.Release|x86.ActiveCfg = Release|x86
 		{392A7751-2CF0-4109-845D-FFC212CDB073}.Release|x86.Build.0 = Release|x86
+		{9252F409-96F9-4991-9DF8-F3B1A149E866}.Debug|x86.ActiveCfg = Debug
+		{9252F409-96F9-4991-9DF8-F3B1A149E866}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C4CDB04-21CB-4743-BBFC-7A08A963EF81}
 	EndGlobalSection
 EndGlobal

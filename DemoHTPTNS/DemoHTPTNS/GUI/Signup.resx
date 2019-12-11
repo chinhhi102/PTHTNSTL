@@ -120,4 +120,29 @@
   <metadata name="epValidation.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA
+        AAD7+/r/+fn4//r6+v/19vT/6Ofl/+jp6P/o6Of/6Ojn/+jo5//o6Of/6eno/+jn5f/19fT/+vr6//n5
+        +f/6+vr//////////////////Pz7/3NqYf9gVk3/ZVtS/2RaUf9kWlH/ZVtS/2BWTf9zamL/+/v7////
+        /////////////9DNyv+RiYT/k4uG/5uUkP+FfXb/d25n/3lwaf95cGn/eXBo/3tya/95b2j/gnlz/5yV
+        kf+blZD/mJGL/8/Myv9vZV3/xsK//9nX1f+1sKz/opyW/7Kuqf+1sq3/tLCr/7Wyrf+uqqT/ramj/6+r
+        pv+oop3/o56Y/6KcmP9zaWH/hHx0////////////uLOu/9/d2/+0rqn/lY6H/52Wkf+Vjoj/wr66/8K/
+        vP+gmpT/rKWh/8K9uv/Hw8D/hHt0/4V9dv+4tbD/rKml/6elof+7uLX/lpKO/4N8d/+Ee3X/enBq/5aP
+        if+oo53/jYV//6ynov/PzMn/yMXC/4B2b/9/dm3/w8PE/968lf/MklL/zZhd/86VVf/uzan/4ePl/62l
+        of+nn5v/y8jF/7WxrP+SjIf/xsPA/8fEwv+Adm//fnVs/8fKzP/XsYf/tWAH/7xvHf+zXgX/27SJ/9XY
+        2v+ck43/npeS/8O/u//Au7f/3NnY/+/u7f/Dv73/gXdw/393bv/Ew8H/8Ojd/8iTWP/Zt47/yJBV//Xt
+        4v/c3d3/saun/7Grp//T0M7/sKum/4uDfv/Dv7v/yMXC/391bv+AeHD/wb66//z////08ev/17OL//Pv
+        6P//////7Ovq/9vY1v/Z1tP/7+7t/62oo/+EfXf/wr+8/8vIxf9/dW7/f3hw/8C8t//9////3sGh/65V
+        AP/au5f//////8K+uv9/dW7/f3Vu/7Cqpv+/u7f/09HP/97d2/+8uLP/gnlx/393b//EwLz//////+/Z
+        wf/LiD7/8tvC///////m5eH/u7ay/7q0sP/i4N3/o52X/0E0Kf9hVk3/o56Z/4d+d/+Hf3j/qaSg/62p
+        pP+vran/k4qB/5eSjP+Vjof/mpOO/5+ZlP+cl5H/pqGc/5SMhf/Ny8f/0s/N/+jm5v+GfXb/eW9o/7Ou
+        qv+alI//mJGM/3NpYv9yaGD/cmhh/3BnX/9vZl7/bWRb/3pwaf+rp6L/////////////////c2hi/5eR
+        jP+Ee3P/j4Z//46Ffv+VjIX/lY2G/5WNhv+VjYb/lY2G/5aNh/+SioP/jYZ+/4qDe/+LhX3/f3dv/5mQ
+        jf//////5OPh/+Hg3f/h4N7/4N7c/+De3P/g39z/4N/c/+Df3P/g3tz/4N/d/+Hg3f/h4N3/4d/d/+Xj
+        4f//////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAA==
+</value>
+  </data>
 </root>

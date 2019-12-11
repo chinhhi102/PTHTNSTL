@@ -62,3 +62,5 @@ C:\Users\chinhhi102\Desktop\PTNSTL\DemoHTPTNS\DemoHTPTNS\obj\x86\Debug\DemoHTPTN
 C:\Users\chinhhi102\Desktop\PTNSTL\DemoHTPTNS\DemoHTPTNS\obj\x86\Debug\DemoHTPTNS.GUI.XuLy.GUI_XuLyHoSo.resources
 C:\Users\chinhhi102\Desktop\PTNSTL\DemoHTPTNS\DemoHTPTNS\obj\x86\Debug\DemoHTPTNS.GUI.XuLy.GUI_XuLy_DanhSachHSPV.resources
 C:\Users\chinhhi102\Desktop\PTNSTL\DemoHTPTNS\DemoHTPTNS\obj\x86\Debug\DemoHTPTNS.GUI.XuLy.GUI_XuLy_DanhSachKQPV.resources
+C:\Users\chinhhi102\Desktop\PTNSTL\DemoHTPTNS\DemoHTPTNS\bin\Debug\QLNhanSu.mdf
+C:\Users\chinhhi102\Desktop\PTNSTL\DemoHTPTNS\DemoHTPTNS\bin\Debug\QLNhanSu_log.ldf

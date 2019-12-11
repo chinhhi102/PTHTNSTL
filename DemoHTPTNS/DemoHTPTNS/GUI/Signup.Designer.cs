@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Signup));
             this.label1 = new System.Windows.Forms.Label();
             this.txtHoVaTenDem = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -176,6 +177,7 @@
             this.Controls.Add(this.txtHoVaTenDem);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Signup";
             this.Text = "Đăng ký";
             ((System.ComponentModel.ISupportInitialize)(this.epValidation)).EndInit();

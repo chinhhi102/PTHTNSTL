@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
             this.mnuMain = new System.Windows.Forms.MenuStrip();
             this.mnuInThongBao = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuThuNhanVaChonLoc = new System.Windows.Forms.ToolStripMenuItem();
@@ -127,6 +128,7 @@
             this.ClientSize = new System.Drawing.Size(1038, 362);
             this.Controls.Add(this.mnuMain);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mnuMain;
             this.Name = "frmHome";
