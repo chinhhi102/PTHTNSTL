@@ -24,6 +24,7 @@ namespace DemoHTPTNS.GUI.CapNhap
         public GUI_CapNhapTinhHinh(int _MaHS)
         {
             InitializeComponent();
+            bntLuu.Enabled = false;
             MaHS = _MaHS;
         }
 
@@ -76,6 +77,8 @@ namespace DemoHTPTNS.GUI.CapNhap
             txtHieuQua.Text = txtKhaNang.Text = txtThaiDo.Text = txtKinhNghiem.Text = "";
             RowSelectIndex = -1;
             txtKhaNang.Focus();
+            bntLuu.Enabled = true;
+            bntSua.Enabled = bntXoa.Enabled = false;
         }
 
         private void bntXoa_Click(object sender, EventArgs e)
@@ -97,29 +100,24 @@ namespace DemoHTPTNS.GUI.CapNhap
 
         private void bntLuu_Click(object sender, EventArgs e)
         {
-            if(RowSelectIndex == -1)
+            try
             {
-                string sql = String.Format("Insert into tbl_TinhHinhThuViec(MaNV, KhaNangLamViec, ThaiDoLamViec, KinhNghiemLamViec, HieuQuaLamViec) values(@MaNV, @KhaNangLamViec, @ThaiDoLamViec, @KinhNghiemLamViec, @HieuQuaLamViec, @NgayCapNhap)");
+                string sql = String.Format("Insert into tbl_TinhHinhThuViec(MaNV, KhaNangLamViec, ThaiDoLamViec, KinhNghiemLamViec, HieuQuaLamViec, NgayCapNhap) values(@MaNV, @KhaNangLamViec, @ThaiDoLamViec, @KinhNghiemLamViec, @HieuQuaLamViec, @NgayCapNhap)");
                 SqlServerHelper.ExecuteNonQuery(sql, CommandType.Text,
                                "@MaNV", SqlDbType.Int, MaHS,
                                "@KhaNangLamViec", SqlDbType.NVarChar, txtKhaNang.Text,
                                "@ThaiDoLamViec", SqlDbType.NVarChar, txtThaiDo.Text,
-                               "@KinhNghiemLamViec", SqlDbType.NVarChar, txtThaiDo.Text,
+                               "@KinhNghiemLamViec", SqlDbType.NVarChar, txtKinhNghiem.Text,
                                "@HieuQuaLamViec", SqlDbType.NVarChar, txtHieuQua.Text,
                                "@NgayCapNhap", SqlDbType.DateTime, DateTime.Now);
+                DataLoad();
+                bntSua.Enabled = bntXoa.Enabled = true;
+                bntLuu.Enabled = false;
             }
-            else
+            catch (Exception ex)
             {
-                int indexUp = Convert.ToInt32(dtCapNhap.Rows[RowSelectIndex][0].ToString());
-                string sql = String.Format("Update tbl_TinhHinhThuViec set KhaNangLamViec = @KhaNangLamViec, ThaiDoLamViec = @ThaiDoLamViec, KinhNghiemLamViec = @KinhNghiemLamViec, HieuQuaLamViec = @HieuQuaLamViec WHERE MaTHTV = @MaTHTV");
-                SqlServerHelper.ExecuteNonQuery(sql, CommandType.Text,
-                               "@MaTHTV", SqlDbType.Int, indexUp,
-                               "@KhaNangLamViec", SqlDbType.NVarChar, txtKhaNang.Text,
-                               "@ThaiDoLamViec", SqlDbType.NVarChar, txtThaiDo.Text,
-                               "@KinhNghiemLamViec", SqlDbType.NVarChar, txtThaiDo.Text,
-                               "@HieuQuaLamViec", SqlDbType.NVarChar, txtHieuQua.Text);
-            }
-            DataLoad();
+                MessageBox.Show(ex.ToString());
+            }            
         }
 
         private void bntThoat_Click(object sender, EventArgs e)
@@ -129,18 +127,71 @@ namespace DemoHTPTNS.GUI.CapNhap
 
         private void bntTuyenDung_Click(object sender, EventArgs e)
         {
-
+            // Trạng thái = 1 là chuẩn bị phỏng vấn, = 2 là đang thử việc, = 3 là được nhận, = 4 là bị loại
+            try
+            {
+                if (MessageBox.Show("Bạn có chắc chắn muốn nhận ứng cử viên này?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    string sql = String.Format("UPDATE tbl_NhanVien SET TrangThai = @TrangThai where MaNV = @MaNV");
+                    SqlServerHelper.ExecuteNonQuery(sql, CommandType.Text,
+                        "@TrangThai", SqlDbType.Int, 3,
+                        "@MaNV", SqlDbType.Int, MaHS);
+                    this.Close();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void bntKhongTuyen_Click(object sender, EventArgs e)
         {
-
+            // Trạng thái = 1 là chuẩn bị phỏng vấn, = 2 là đang thử việc, = 3 là được nhận, = 4 là bị loại
+            try
+            {
+                if (MessageBox.Show("Bạn có chắc chắn muốn loại ứng cử viên này?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    string sql = String.Format("UPDATE tbl_NhanVien SET TrangThai = @TrangThai where MaNV = @MaNV");
+                    SqlServerHelper.ExecuteNonQuery(sql, CommandType.Text,
+                        "@TrangThai", SqlDbType.Int, 4,
+                        "@MaNV", SqlDbType.Int, MaHS);
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void dtgvCapNhap_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            bntLuu.Enabled = false;
+            bntSua.Enabled = bntXoa.Enabled = true;
+
             RowSelectIndex = dtgvCapNhap.CurrentCell.RowIndex;
             BindingData();
+        }
+
+        private void bntSua_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int indexUp = Convert.ToInt32(dtCapNhap.Rows[RowSelectIndex][0].ToString());
+                string sql = String.Format("Update tbl_TinhHinhThuViec set KhaNangLamViec = @KhaNangLamViec, ThaiDoLamViec = @ThaiDoLamViec, KinhNghiemLamViec = @KinhNghiemLamViec, HieuQuaLamViec = @HieuQuaLamViec WHERE MaTHTV = @MaTHTV");
+                SqlServerHelper.ExecuteNonQuery(sql, CommandType.Text,
+                               "@MaTHTV", SqlDbType.Int, indexUp,
+                               "@KhaNangLamViec", SqlDbType.NVarChar, txtKhaNang.Text,
+                               "@ThaiDoLamViec", SqlDbType.NVarChar, txtThaiDo.Text,
+                               "@KinhNghiemLamViec", SqlDbType.NVarChar, txtKinhNghiem.Text,
+                               "@HieuQuaLamViec", SqlDbType.NVarChar, txtHieuQua.Text);
+                DataLoad();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

@@ -384,6 +384,7 @@
             this.bntSua.TabIndex = 6;
             this.bntSua.Text = "Sửa";
             this.bntSua.UseVisualStyleBackColor = true;
+            this.bntSua.Click += new System.EventHandler(this.bntSua_Click);
             // 
             // GUI_CapNhapTinhHinh
             // 

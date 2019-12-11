@@ -37,6 +37,7 @@ namespace DemoHTPTNS.GUI.XuLy
 
         private void BindingData()
         {
+            if (SelectedIndex >= dtDSKQPV.Rows.Count) return;
             txtMaNV.Text = dtDSKQPV.Rows[SelectedIndex][0].ToString();
             txtHoTen.Text = dtDSKQPV.Rows[SelectedIndex][1].ToString();
             dtpNgaySinh.Value = Convert.ToDateTime(dtDSKQPV.Rows[SelectedIndex][2].ToString());
@@ -50,7 +51,8 @@ namespace DemoHTPTNS.GUI.XuLy
                     break;
                 }
             }
-            cbbKetQua.SelectedIndex = Convert.ToInt32(dtDSKQPV.Rows[SelectedIndex][5]);
+            if(!String.IsNullOrEmpty(dtDSKQPV.Rows[SelectedIndex][5].ToString()))
+                cbbKetQua.SelectedIndex = Convert.ToInt32(dtDSKQPV.Rows[SelectedIndex][5]);
             if (String.IsNullOrEmpty(dtDSKQPV.Rows[SelectedIndex][6].ToString()))
                 dtpNgayThuViec.Value = DateTime.Now;
             else
@@ -64,10 +66,11 @@ namespace DemoHTPTNS.GUI.XuLy
 
         private void bntLuu_Click(object sender, EventArgs e)
         {
-            string sql = String.Format("Update tbl_NhanVien Set KetQuaPhongVan = @KetQuaPhongVan, NgayThuViec = @NgayThuViec where MaNV = @MaNV");
+            string sql = String.Format("Update tbl_NhanVien Set KetQuaPhongVan = @KetQuaPhongVan, NgayThuViec = @NgayThuViec, NgayKetThucThuViec = @NgayKetThucThuViec where MaNV = @MaNV");
             SqlServerHelper.ExecuteNonQuery(sql, CommandType.Text,
                 "@KetQuaPhongVan", SqlDbType.Int, cbbKetQua.SelectedIndex,
                 "@NgayThuViec", SqlDbType.DateTime, dtpNgayThuViec.Value,
+                "@NgayKetThucThuViec", SqlDbType.DateTime, dtpNgayThuViec.Value.AddMonths(1),
                 "@MaNV", SqlDbType.Int, Convert.ToInt32(txtMaNV.Text));
             LoadData();
         }

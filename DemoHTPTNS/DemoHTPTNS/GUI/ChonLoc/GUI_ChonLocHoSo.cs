@@ -169,28 +169,56 @@ namespace DemoHTPTNS.GUI.ChonLoc
                 errorChonLoc.SetError(txtQueQuan, "Quên quán không được bỏ trống!");
                 return true;
             }
+            if(cbbViTriCV.SelectedIndex < 0)
+            {
+                errorChonLoc.SetError(cbbViTriCV, "Vị trí công việc không được bỏ trống!");
+                return true;
+            }
+            if (cbbTrinhDo.SelectedIndex < 0)
+            {
+                errorChonLoc.SetError(cbbTrinhDo, "Trình độ học vấn không được bỏ trống!");
+                return true;
+            }
+            if (cbbBacLuong.SelectedIndex < 0)
+            {
+                errorChonLoc.SetError(cbbBacLuong, "Bậc lương không được bỏ trống!");
+                return true;
+            }
+            if (cbbChuyenMon.SelectedIndex < 0)
+            {
+                errorChonLoc.SetError(cbbChuyenMon, "Chuyên môn không được bỏ trống!");
+                return true;
+            }
             return false;
         }
         private void bntLuu_Click(object sender, EventArgs e)
         {
             if (check_Null()) return;
-            String sql = String.Format("insert into tbl_NhanVien(HoTen, NgaySinh, GioiTinh, SoDienThoai, email, NgayNopHS, QueQuan, DanToc, MaCV, MaTDHV, BacLuong, MaCM) values(@HoTen, @NgaySinh, @GioiTinh, @SoDienThoai, @email, @NgayNopHS, @QueQuan, @DanToc, @MaCV, @MaTDHV, @BacLuong, @MaCM)");
-            SqlServerHelper.ExecuteNonQuery(sql, CommandType.Text,
-                "@HoTen", SqlDbType.NVarChar, txtHoTen.Text,
-                "@NgaySinh", SqlDbType.DateTime, dtpNgaySinh.Value,
-                "@GioiTinh", SqlDbType.Bit, rbntNam.Checked,
-                "@SoDienThoai", SqlDbType.NVarChar, txtSDT.Text,
-                "@email", SqlDbType.NVarChar, txtEmail.Text,
-                "@NgayNopHS", SqlDbType.DateTime, dtpNgayNopHS.Value,
-                "@QueQuan", SqlDbType.NVarChar, txtQueQuan.Text,
-                "@DanToc", SqlDbType.NVarChar, txtDanToc.Text,
-                "@MaCV", SqlDbType.Int, Convert.ToInt32(dtViTri.Rows[cbbViTriCV.SelectedIndex][0].ToString()),
-                "@MaTDHV", SqlDbType.Int, Convert.ToInt32(dtTrinhDo.Rows[cbbTrinhDo.SelectedIndex][0].ToString()),
-                "@BacLuong", SqlDbType.Int, Convert.ToInt32(cbbBacLuong.Text),
-                "@MaCM", SqlDbType.Int, Convert.ToInt32(dtCM.Rows[cbbChuyenMon.SelectedIndex][0].ToString()));
-            bntLuu.Enabled = false;
-            bntSua.Enabled = bntThem.Enabled = bntXoa.Enabled = true;
-            LoadData();
+            try
+            {
+                String sql = String.Format("insert into tbl_NhanVien(HoTen, NgaySinh, GioiTinh, SoDienThoai, email, NgayNopHS, QueQuan, DanToc, MaCV, MaTDHV, BacLuong, MaCM) values(@HoTen, @NgaySinh, @GioiTinh, @SoDienThoai, @email, @NgayNopHS, @QueQuan, @DanToc, @MaCV, @MaTDHV, @BacLuong, @MaCM)");
+                SqlServerHelper.ExecuteNonQuery(sql, CommandType.Text,
+                    "@HoTen", SqlDbType.NVarChar, txtHoTen.Text,
+                    "@NgaySinh", SqlDbType.DateTime, dtpNgaySinh.Value,
+                    "@GioiTinh", SqlDbType.Bit, rbntNam.Checked,
+                    "@SoDienThoai", SqlDbType.NVarChar, txtSDT.Text,
+                    "@email", SqlDbType.NVarChar, txtEmail.Text,
+                    "@NgayNopHS", SqlDbType.DateTime, dtpNgayNopHS.Value,
+                    "@QueQuan", SqlDbType.NVarChar, txtQueQuan.Text,
+                    "@DanToc", SqlDbType.NVarChar, txtDanToc.Text,
+                    "@MaCV", SqlDbType.Int, Convert.ToInt32(dtViTri.Rows[cbbViTriCV.SelectedIndex][0].ToString()),
+                    "@MaTDHV", SqlDbType.Int, Convert.ToInt32(dtTrinhDo.Rows[cbbTrinhDo.SelectedIndex][0].ToString()),
+                    "@BacLuong", SqlDbType.Int, Convert.ToInt32(dtBacLuong.Rows[cbbBacLuong.SelectedIndex][0].ToString()),
+                    "@MaCM", SqlDbType.Int, Convert.ToInt32(dtCM.Rows[cbbChuyenMon.SelectedIndex][0].ToString()));
+                bntLuu.Enabled = false;
+                bntSua.Enabled = bntThem.Enabled = bntXoa.Enabled = true;
+                LoadData();
+                dtgvChonLoc.Rows[RowSelectIndex].Selected = true;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void bntThoat_Click(object sender, EventArgs e)

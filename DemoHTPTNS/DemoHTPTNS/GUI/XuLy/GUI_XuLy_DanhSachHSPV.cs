@@ -33,6 +33,7 @@ namespace DemoHTPTNS.GUI.XuLy
 
         private void BindingData()
         {
+            if (SelectedIndex >= dtDSHSPV.Rows.Count) return;
             txtMaNV.Text = dtDSHSPV.Rows[SelectedIndex][0].ToString();
             txtHoTen.Text = dtDSHSPV.Rows[SelectedIndex][1].ToString();
             dtpNgaySinh.Value = Convert.ToDateTime(dtDSHSPV.Rows[SelectedIndex][2].ToString());
@@ -64,7 +65,7 @@ namespace DemoHTPTNS.GUI.XuLy
 
         private void bntLuu_Click(object sender, EventArgs e)
         {
-            string sql = String.Format("Update tbl_NhanVien Set NgayPhongVan = @NgayPhongVan where MaNV = @MaNV");
+            string sql = String.Format("Update tbl_NhanVien Set NgayPhongVan = @NgayPhongVan, TrangThai = 1 where MaNV = @MaNV");
             SqlServerHelper.ExecuteNonQuery(sql, CommandType.Text,
                 "@NgayPhongVan", SqlDbType.DateTime, dtpLichPV.Value,
                 "@MaNV", SqlDbType.Int, Convert.ToInt32(txtMaNV.Text));
