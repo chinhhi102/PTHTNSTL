@@ -43,43 +43,43 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 61);
+            this.label1.Location = new System.Drawing.Point(45, 70);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.Size = new System.Drawing.Size(62, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tài khoản";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 108);
+            this.label2.Location = new System.Drawing.Point(45, 125);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.Size = new System.Drawing.Size(59, 15);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mật khẩu";
             // 
             // txtTaiKhoan
             // 
-            this.txtTaiKhoan.Location = new System.Drawing.Point(137, 58);
+            this.txtTaiKhoan.Location = new System.Drawing.Point(160, 67);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.Size = new System.Drawing.Size(177, 20);
+            this.txtTaiKhoan.Size = new System.Drawing.Size(206, 22);
             this.txtTaiKhoan.TabIndex = 1;
             this.txtTaiKhoan.TextChanged += new System.EventHandler(this.txtTaiKhoan_TextChanged);
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(137, 105);
+            this.txtMatKhau.Location = new System.Drawing.Point(160, 121);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
-            this.txtMatKhau.Size = new System.Drawing.Size(177, 20);
+            this.txtMatKhau.Size = new System.Drawing.Size(206, 22);
             this.txtMatKhau.TabIndex = 2;
             this.txtMatKhau.TextChanged += new System.EventHandler(this.txtMatKhau_TextChanged);
             // 
             // bntDangNhap
             // 
-            this.bntDangNhap.Location = new System.Drawing.Point(42, 146);
+            this.bntDangNhap.Location = new System.Drawing.Point(49, 168);
             this.bntDangNhap.Name = "bntDangNhap";
-            this.bntDangNhap.Size = new System.Drawing.Size(75, 23);
+            this.bntDangNhap.Size = new System.Drawing.Size(87, 27);
             this.bntDangNhap.TabIndex = 3;
             this.bntDangNhap.Text = "Đăng nhập";
             this.bntDangNhap.UseVisualStyleBackColor = true;
@@ -88,9 +88,9 @@
             // bntThoat
             // 
             this.bntThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.bntThoat.Location = new System.Drawing.Point(239, 146);
+            this.bntThoat.Location = new System.Drawing.Point(279, 168);
             this.bntThoat.Name = "bntThoat";
-            this.bntThoat.Size = new System.Drawing.Size(75, 23);
+            this.bntThoat.Size = new System.Drawing.Size(87, 27);
             this.bntThoat.TabIndex = 4;
             this.bntThoat.Text = "Thoát";
             this.bntThoat.UseVisualStyleBackColor = true;
@@ -98,9 +98,9 @@
             // 
             // bntDangky
             // 
-            this.bntDangky.Location = new System.Drawing.Point(137, 146);
+            this.bntDangky.Location = new System.Drawing.Point(160, 168);
             this.bntDangky.Name = "bntDangky";
-            this.bntDangky.Size = new System.Drawing.Size(75, 23);
+            this.bntDangky.Size = new System.Drawing.Size(87, 27);
             this.bntDangky.TabIndex = 3;
             this.bntDangky.Text = "Đăng ký";
             this.bntDangky.UseVisualStyleBackColor = true;
@@ -113,10 +113,10 @@
             // Login
             // 
             this.AcceptButton = this.bntDangNhap;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.bntThoat;
-            this.ClientSize = new System.Drawing.Size(349, 224);
+            this.ClientSize = new System.Drawing.Size(407, 258);
             this.Controls.Add(this.bntThoat);
             this.Controls.Add(this.bntDangky);
             this.Controls.Add(this.bntDangNhap);
@@ -124,6 +124,7 @@
             this.Controls.Add(this.txtTaiKhoan);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

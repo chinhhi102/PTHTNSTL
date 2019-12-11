@@ -38,9 +38,9 @@
             // 
             // bntViTri
             // 
-            this.bntViTri.Location = new System.Drawing.Point(13, 13);
+            this.bntViTri.Location = new System.Drawing.Point(15, 15);
             this.bntViTri.Name = "bntViTri";
-            this.bntViTri.Size = new System.Drawing.Size(173, 23);
+            this.bntViTri.Size = new System.Drawing.Size(202, 27);
             this.bntViTri.TabIndex = 4;
             this.bntViTri.Text = "BÁO CÁO THEO VỊ TRÍ";
             this.bntViTri.UseVisualStyleBackColor = true;
@@ -48,9 +48,9 @@
             // 
             // bntPhongBan
             // 
-            this.bntPhongBan.Location = new System.Drawing.Point(192, 13);
+            this.bntPhongBan.Location = new System.Drawing.Point(224, 15);
             this.bntPhongBan.Name = "bntPhongBan";
-            this.bntPhongBan.Size = new System.Drawing.Size(173, 23);
+            this.bntPhongBan.Size = new System.Drawing.Size(202, 27);
             this.bntPhongBan.TabIndex = 4;
             this.bntPhongBan.Text = "BÁO CÁO THEO PHÒNG BAN";
             this.bntPhongBan.UseVisualStyleBackColor = true;
@@ -58,9 +58,9 @@
             // 
             // bntChuyenMon
             // 
-            this.bntChuyenMon.Location = new System.Drawing.Point(371, 13);
+            this.bntChuyenMon.Location = new System.Drawing.Point(433, 15);
             this.bntChuyenMon.Name = "bntChuyenMon";
-            this.bntChuyenMon.Size = new System.Drawing.Size(173, 23);
+            this.bntChuyenMon.Size = new System.Drawing.Size(202, 27);
             this.bntChuyenMon.TabIndex = 4;
             this.bntChuyenMon.Text = "BÁO CÁO THEO CHUYÊN MÔN";
             this.bntChuyenMon.UseVisualStyleBackColor = true;
@@ -68,9 +68,9 @@
             // 
             // bntKhaNang
             // 
-            this.bntKhaNang.Location = new System.Drawing.Point(550, 12);
+            this.bntKhaNang.Location = new System.Drawing.Point(642, 14);
             this.bntKhaNang.Name = "bntKhaNang";
-            this.bntKhaNang.Size = new System.Drawing.Size(173, 23);
+            this.bntKhaNang.Size = new System.Drawing.Size(202, 27);
             this.bntKhaNang.TabIndex = 4;
             this.bntKhaNang.Text = "BÁO CÁO THEO KHẢ NĂNG";
             this.bntKhaNang.UseVisualStyleBackColor = true;
@@ -78,9 +78,9 @@
             // 
             // bntTienLuong
             // 
-            this.bntTienLuong.Location = new System.Drawing.Point(729, 12);
+            this.bntTienLuong.Location = new System.Drawing.Point(850, 14);
             this.bntTienLuong.Name = "bntTienLuong";
-            this.bntTienLuong.Size = new System.Drawing.Size(173, 23);
+            this.bntTienLuong.Size = new System.Drawing.Size(202, 27);
             this.bntTienLuong.TabIndex = 4;
             this.bntTienLuong.Text = "BÁO CÁO THEO TIỀN LƯƠNG";
             this.bntTienLuong.UseVisualStyleBackColor = true;
@@ -88,9 +88,9 @@
             // 
             // bntHoSo
             // 
-            this.bntHoSo.Location = new System.Drawing.Point(908, 12);
+            this.bntHoSo.Location = new System.Drawing.Point(1059, 14);
             this.bntHoSo.Name = "bntHoSo";
-            this.bntHoSo.Size = new System.Drawing.Size(183, 23);
+            this.bntHoSo.Size = new System.Drawing.Size(213, 27);
             this.bntHoSo.TabIndex = 4;
             this.bntHoSo.Text = "BÁO CÁO THEO HỒ SƠ NHẬN";
             this.bntHoSo.UseVisualStyleBackColor = true;
@@ -98,15 +98,16 @@
             // 
             // GUI_BaoCao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1180, 569);
+            this.ClientSize = new System.Drawing.Size(1370, 657);
             this.Controls.Add(this.bntHoSo);
             this.Controls.Add(this.bntTienLuong);
             this.Controls.Add(this.bntKhaNang);
             this.Controls.Add(this.bntChuyenMon);
             this.Controls.Add(this.bntPhongBan);
             this.Controls.Add(this.bntViTri);
+            this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
             this.Name = "GUI_BaoCao";
             this.Text = "GUI_BaoCao";
             this.ResumeLayout(false);

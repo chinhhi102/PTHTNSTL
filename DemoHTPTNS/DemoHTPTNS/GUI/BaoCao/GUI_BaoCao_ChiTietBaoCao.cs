@@ -86,7 +86,8 @@ cate = (String)this.Tag;
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "Error");
+                MessageBox.Show("Chức năng tạm thời bị lỗi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+             //   MessageBox.Show(ex.ToString(), "Error");
             }
         }
         private void bntThoat_Click(object sender, EventArgs e)

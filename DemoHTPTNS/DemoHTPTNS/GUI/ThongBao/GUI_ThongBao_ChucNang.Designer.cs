@@ -34,9 +34,9 @@
             // 
             // bntDanhSach
             // 
-            this.bntDanhSach.Location = new System.Drawing.Point(12, 12);
+            this.bntDanhSach.Location = new System.Drawing.Point(14, 14);
             this.bntDanhSach.Name = "bntDanhSach";
-            this.bntDanhSach.Size = new System.Drawing.Size(197, 23);
+            this.bntDanhSach.Size = new System.Drawing.Size(230, 27);
             this.bntDanhSach.TabIndex = 0;
             this.bntDanhSach.Text = "Danh sách mẫu thông báo";
             this.bntDanhSach.UseVisualStyleBackColor = true;
@@ -44,9 +44,9 @@
             // 
             // bntThem
             // 
-            this.bntThem.Location = new System.Drawing.Point(225, 12);
+            this.bntThem.Location = new System.Drawing.Point(262, 14);
             this.bntThem.Name = "bntThem";
-            this.bntThem.Size = new System.Drawing.Size(197, 23);
+            this.bntThem.Size = new System.Drawing.Size(230, 27);
             this.bntThem.TabIndex = 1;
             this.bntThem.Text = "Thêm mẫu thông báo";
             this.bntThem.UseVisualStyleBackColor = true;
@@ -54,11 +54,12 @@
             // 
             // GUI_ThongBao_ChucNang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(933, 519);
             this.Controls.Add(this.bntThem);
             this.Controls.Add(this.bntDanhSach);
+            this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
             this.Name = "GUI_ThongBao_ChucNang";
             this.Text = "GUI_ThongBao_ChucNang";
             this.ResumeLayout(false);

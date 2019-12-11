@@ -34,9 +34,9 @@
             // 
             // bntDatLich
             // 
-            this.bntDatLich.Location = new System.Drawing.Point(12, 12);
+            this.bntDatLich.Location = new System.Drawing.Point(14, 14);
             this.bntDatLich.Name = "bntDatLich";
-            this.bntDatLich.Size = new System.Drawing.Size(204, 23);
+            this.bntDatLich.Size = new System.Drawing.Size(238, 27);
             this.bntDatLich.TabIndex = 0;
             this.bntDatLich.Text = "Đặt lịch phỏng vấn";
             this.bntDatLich.UseVisualStyleBackColor = true;
@@ -44,9 +44,9 @@
             // 
             // bntXuLyKQ
             // 
-            this.bntXuLyKQ.Location = new System.Drawing.Point(222, 12);
+            this.bntXuLyKQ.Location = new System.Drawing.Point(259, 14);
             this.bntXuLyKQ.Name = "bntXuLyKQ";
-            this.bntXuLyKQ.Size = new System.Drawing.Size(204, 23);
+            this.bntXuLyKQ.Size = new System.Drawing.Size(238, 27);
             this.bntXuLyKQ.TabIndex = 0;
             this.bntXuLyKQ.Text = "Xử lý kết quả phỏng vấn";
             this.bntXuLyKQ.UseVisualStyleBackColor = true;
@@ -54,11 +54,12 @@
             // 
             // GUI_XuLyHoSo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(730, 355);
+            this.ClientSize = new System.Drawing.Size(852, 410);
             this.Controls.Add(this.bntXuLyKQ);
             this.Controls.Add(this.bntDatLich);
+            this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
             this.Name = "GUI_XuLyHoSo";
             this.Text = "GUI_XuLyHoSo";
             this.ResumeLayout(false);
