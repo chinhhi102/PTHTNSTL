@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_BaoCao_ChiTietBaoCao));
             this.lbBaoCao = new System.Windows.Forms.Label();
             this.dtgvBaoCao = new System.Windows.Forms.DataGridView();
             this.bntXuatBaoCao = new System.Windows.Forms.Button();
@@ -36,6 +37,9 @@
             this.dtpTuNgay = new System.Windows.Forms.DateTimePicker();
             this.dtpDenNgay = new System.Windows.Forms.DateTimePicker();
             this.bntThoat = new System.Windows.Forms.Button();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBaoCao)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,6 +71,7 @@
             this.bntXuatBaoCao.TabIndex = 2;
             this.bntXuatBaoCao.Text = "Xuất Báo Cáo";
             this.bntXuatBaoCao.UseVisualStyleBackColor = true;
+            this.bntXuatBaoCao.Click += new System.EventHandler(this.bntXuatBaoCao_Click);
             // 
             // label1
             // 
@@ -113,6 +118,26 @@
             this.bntThoat.UseVisualStyleBackColor = true;
             this.bntThoat.Click += new System.EventHandler(this.bntThoat_Click);
             // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.Document = this.printDocument1;
+            this.printDialog1.UseEXDialog = true;
+            // 
             // GUI_BaoCao_ChiTietBaoCao
             // 
             this.AcceptButton = this.bntXuatBaoCao;
@@ -148,5 +173,8 @@
         private System.Windows.Forms.DateTimePicker dtpTuNgay;
         private System.Windows.Forms.DateTimePicker dtpDenNgay;
         private System.Windows.Forms.Button bntThoat;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintDialog printDialog1;
     }
 }

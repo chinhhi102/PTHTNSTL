@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using DemoHTPTNS.DAL;
+using System.Drawing.Printing;
 
 namespace DemoHTPTNS.GUI.ThongBao
 {
@@ -14,6 +15,7 @@ namespace DemoHTPTNS.GUI.ThongBao
     {
         DataTable dtCongViec = null;
         DataTable dtMauThongBao = null;
+        Bitmap bmp;
         int indexSelected = 0;
         public GUI_InThongBao()
         {
@@ -159,30 +161,47 @@ namespace DemoHTPTNS.GUI.ThongBao
                 cbbViTriTuyen.Focus();
                 return;
             }
+            print();
             DialogResult result = MessageBox.Show("Bạn có muốn lưu lại mẫu không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(result == DialogResult.Yes)
             {
-                string sql = String.Format("Insert into tbl_MauThongBao values(@NoiLamViec, @YeuCauKyThuat, @SoLuongThamGia, @SoNguoiCanTuyen, @MaCV, @YeuCauKhac, @YeuCauNgoaiNgu, @TuoiTu, @TuoiDen, @MucLuong, @ThoiGianLamViec, @TinhTrangHonNhan, @HinhThucTuyen, @NgayDuKienXuatCanh, @NgayTaoMau)");
-                SqlServerHelper.ExecuteNonQuery(sql, CommandType.Text,
-                    "@NoiLamViec", SqlDbType.NVarChar, txtNoiLamViec.Text,
-                    "@YeuCauKyThuat", SqlDbType.NVarChar, txtYeuCauKyThuat.Text,
-                    "@SoLuongThamGia", SqlDbType.NVarChar, txtSLThamGia.Text,
-                    "@SoNguoiCanTuyen", SqlDbType.NVarChar, txtSoNguoiCanTuyen.Text,
-                    "@MaCV", SqlDbType.Int, Convert.ToInt32(dtCongViec.Rows[indexSelected][0]),
-                    "@YeuCauKhac", SqlDbType.NVarChar, txtYeuCauKhac.Text,
-                    "@YeuCauNgoaiNgu", SqlDbType.NVarChar, txtNgoaiNgu.Text,
-                    "@TuoiTu", SqlDbType.Int, Convert.ToInt32(cbbTuoiTu.Text),
-                    "@TuoiDen", SqlDbType.Int, Convert.ToInt32(cbbTuoiDen.Text),
-                    "@MucLuong", SqlDbType.NVarChar, txtLuongCB.Text,
-                    "@ThoiGianLamViec", SqlDbType.NVarChar, txtThoiGianLam.Text,
-                    "@TinhTrangHonNhan", SqlDbType.NVarChar, (radioDocThan.Checked ? 1 : radioDaKetHon.Checked ? 2 : 0),
-                    "@HinhThucTuyen", SqlDbType.NVarChar, txtHinhThucTuyen.Text,
-                    "@NgayDuKienXuatCanh", SqlDbType.NVarChar, txtXuatCanh.Text,
-                    "@NgayTaoMau", SqlDbType.Date, DateTime.Now.ToString("yyyyMMddHHmmss"));
+                try
+                {
+                    string sql = String.Format("Insert into tbl_MauThongBao values(@NoiLamViec, @YeuCauKyThuat, @SoLuongThamGia, @SoNguoiCanTuyen, @MaCV, @YeuCauKhac, @YeuCauNgoaiNgu, @TuoiTu, @TuoiDen, @MucLuong, @ThoiGianLamViec, @TinhTrangHonNhan, @HinhThucTuyen, @NgayDuKienXuatCanh, @NgayTaoMau)");
+                    SqlServerHelper.ExecuteNonQuery(sql, CommandType.Text,
+                        "@NoiLamViec", SqlDbType.NVarChar, txtNoiLamViec.Text,
+                        "@YeuCauKyThuat", SqlDbType.NVarChar, txtYeuCauKyThuat.Text,
+                        "@SoLuongThamGia", SqlDbType.NVarChar, txtSLThamGia.Text,
+                        "@SoNguoiCanTuyen", SqlDbType.NVarChar, txtSoNguoiCanTuyen.Text,
+                        "@MaCV", SqlDbType.Int, Convert.ToInt32(dtCongViec.Rows[indexSelected][0]),
+                        "@YeuCauKhac", SqlDbType.NVarChar, txtYeuCauKhac.Text,
+                        "@YeuCauNgoaiNgu", SqlDbType.NVarChar, txtNgoaiNgu.Text,
+                        "@TuoiTu", SqlDbType.Int, Convert.ToInt32(cbbTuoiTu.Text),
+                        "@TuoiDen", SqlDbType.Int, Convert.ToInt32(cbbTuoiDen.Text),
+                        "@MucLuong", SqlDbType.NVarChar, txtLuongCB.Text,
+                        "@ThoiGianLamViec", SqlDbType.NVarChar, txtThoiGianLam.Text,
+                        "@TinhTrangHonNhan", SqlDbType.NVarChar, (radioDocThan.Checked ? 1 : radioDaKetHon.Checked ? 2 : 0),
+                        "@HinhThucTuyen", SqlDbType.NVarChar, txtHinhThucTuyen.Text,
+                        "@NgayDuKienXuatCanh", SqlDbType.NVarChar, txtXuatCanh.Text,
+                        "@NgayTaoMau", SqlDbType.Date, DateTime.Now);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lưu bị lỗi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(ex.ToString());
+                }
             }
             this.Close();
         }
 
+        private void print()
+        {
+            Graphics g = this.CreateGraphics();
+            bmp = new Bitmap(this.Size.Width, this.Size.Height, g);
+            Graphics gm = Graphics.FromImage(bmp);
+            gm.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, this.Size);
+            printDialog1.ShowDialog();
+        }
         private void txtNoiLamViec_TextChanged(object sender, EventArgs e)
         {
             string s = txtNoiLamViec.Text;
@@ -233,6 +252,11 @@ namespace DemoHTPTNS.GUI.ThongBao
             {
                 epInThongBao.Clear();
             }
+        }
+
+        private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            e.Graphics.DrawImage(bmp, 0, 0);
         }
     }
 }

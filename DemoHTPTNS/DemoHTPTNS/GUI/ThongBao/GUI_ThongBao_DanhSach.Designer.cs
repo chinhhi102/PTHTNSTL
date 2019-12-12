@@ -52,14 +52,14 @@
             this.dtgvDanhSachMau.Name = "dtgvDanhSachMau";
             this.dtgvDanhSachMau.ReadOnly = true;
             this.dtgvDanhSachMau.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvDanhSachMau.Size = new System.Drawing.Size(1449, 373);
+            this.dtgvDanhSachMau.Size = new System.Drawing.Size(1343, 373);
             this.dtgvDanhSachMau.TabIndex = 1;
             this.dtgvDanhSachMau.Click += new System.EventHandler(this.dtgvDanhSachMau_Click);
             // 
             // bntThoat
             // 
             this.bntThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.bntThoat.Location = new System.Drawing.Point(1377, 427);
+            this.bntThoat.Location = new System.Drawing.Point(1271, 426);
             this.bntThoat.Name = "bntThoat";
             this.bntThoat.Size = new System.Drawing.Size(87, 27);
             this.bntThoat.TabIndex = 2;
@@ -70,7 +70,7 @@
             // bntInMau
             // 
             this.bntInMau.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.bntInMau.Location = new System.Drawing.Point(1282, 427);
+            this.bntInMau.Location = new System.Drawing.Point(1166, 426);
             this.bntInMau.Name = "bntInMau";
             this.bntInMau.Size = new System.Drawing.Size(87, 27);
             this.bntInMau.TabIndex = 2;

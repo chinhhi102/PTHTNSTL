@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using DemoHTPTNS.DAL;
+using System.Drawing.Printing;
 
 namespace DemoHTPTNS.GUI.BaoCao
 {
@@ -19,6 +20,7 @@ namespace DemoHTPTNS.GUI.BaoCao
 
         private String cate = "";
         private DataTable dt = null;
+        private Bitmap bmp;
 
         /*
         V -> Vi tri công việc
@@ -104,5 +106,23 @@ cate = (String)this.Tag;
         {
             LoadData();
         }
+
+        private void bntXuatBaoCao_Click(object sender, EventArgs e)
+        {
+            print();
+        }
+        private void print()
+        {
+            Graphics g = this.CreateGraphics();
+            bmp = new Bitmap(this.Size.Width, this.Size.Height, g);
+            Graphics gm = Graphics.FromImage(bmp);
+            gm.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, this.Size);
+            printDialog1.ShowDialog();
+        }
+        private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            e.Graphics.DrawImage(bmp, 0, 0);
+        }
+
     }
 }

@@ -76,10 +76,10 @@
             "ComponentsUrl" = "8:"
                 "Items"
                 {
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7"
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5.2"
                     {
-                    "Name" = "8:Microsoft .NET Framework 4.7 (x86 and x64)"
-                    "ProductCode" = "8:.NETFramework,Version=v4.7"
+                    "Name" = "8:Microsoft .NET Framework 4.5.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5.2"
                     }
                 }
             }
@@ -99,6 +99,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -307,7 +315,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Quản Lý Nhân Sự"
         "ProductCode" = "8:{6BA21393-0F17-406C-A7FB-8EA4E197289F}"
-        "PackageCode" = "8:{25946A34-5C2D-444A-A23B-C65C397A86E6}"
+        "PackageCode" = "8:{966CF006-75ED-4455-8221-159AD1260B71}"
         "UpgradeCode" = "8:{5E5C0BDD-72E0-4E35-9E6D-89BB29475AAB}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

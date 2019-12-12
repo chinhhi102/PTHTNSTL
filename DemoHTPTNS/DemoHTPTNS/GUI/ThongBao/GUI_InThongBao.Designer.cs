@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_InThongBao));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNoiLamViec = new System.Windows.Forms.TextBox();
@@ -69,6 +70,9 @@
             this.cbbTuoiTu = new System.Windows.Forms.ComboBox();
             this.cbbViTriTuyen = new System.Windows.Forms.ComboBox();
             this.epInThongBao = new System.Windows.Forms.ErrorProvider(this.components);
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.pnlTinhTrangHonNhan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epInThongBao)).BeginInit();
             this.SuspendLayout();
@@ -258,7 +262,7 @@
             // bntThoat
             // 
             this.bntThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.bntThoat.Location = new System.Drawing.Point(1028, 494);
+            this.bntThoat.Location = new System.Drawing.Point(1028, 493);
             this.bntThoat.Name = "bntThoat";
             this.bntThoat.Size = new System.Drawing.Size(87, 27);
             this.bntThoat.TabIndex = 18;
@@ -372,7 +376,7 @@
             // 
             // bntInThongBao
             // 
-            this.bntInThongBao.Location = new System.Drawing.Point(923, 494);
+            this.bntInThongBao.Location = new System.Drawing.Point(923, 495);
             this.bntInThongBao.Name = "bntInThongBao";
             this.bntInThongBao.Size = new System.Drawing.Size(87, 27);
             this.bntInThongBao.TabIndex = 16;
@@ -426,6 +430,26 @@
             // epInThongBao
             // 
             this.epInThongBao.ContainerControl = this;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.Document = this.printDocument1;
+            this.printDialog1.UseEXDialog = true;
             // 
             // GUI_InThongBao
             // 
@@ -524,5 +548,8 @@
         private System.Windows.Forms.ComboBox cbbTuoiTu;
         private System.Windows.Forms.ComboBox cbbViTriTuyen;
         private System.Windows.Forms.ErrorProvider epInThongBao;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.PrintDialog printDialog1;
     }
 }

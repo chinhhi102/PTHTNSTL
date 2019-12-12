@@ -28,7 +28,7 @@ namespace DemoHTPTNS.GUI.ThongBao
                 dtMauThongBao = SqlServerHelper.ExecuteDataTable(sql, CommandType.Text);
                 dtgvDanhSachMau.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dtgvDanhSachMau.DataSource = dtMauThongBao;
-            }catch(Exception ex)
+            } catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
@@ -45,7 +45,7 @@ namespace DemoHTPTNS.GUI.ThongBao
 
         private void bntInMau_Click(object sender, EventArgs e)
         {
-            if(RowSelectIndex == -1)
+            if (RowSelectIndex == -1 || RowSelectIndex >= dtMauThongBao.Rows.Count)
             {
                 MessageBox.Show("Bạn chưa chọn mẫu, Vui lòng chọn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
